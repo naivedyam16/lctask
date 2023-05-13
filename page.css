@@ -1,0 +1,163 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hamburger Menubar */
+#hamburger-menu {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+#hamburger-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#hamburger-menu ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+#hamburger-menu ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Homepage */
+#homepage {
+  padding: 20px;
+}
+
+#add-task {
+  margin-bottom: 20px;
+}
+
+#task-list li {
+  margin-bottom: 10px;
+}
+
+/* Completed Tasks */
+#completed-tasks {
+  padding: 20px;
+}
+
+#completed-task-list li {
+  margin-bottom: 10px;
+}
+
+/* Pending Tasks */
+#pending-tasks {
+  padding: 20px;
+}
+
+#pending-task-list li {
+  margin-bottom: 10px;
+}
+
+/* Responsive Styles */
+@media screen and (min-width: 768px) {
+  /* Sidelined Hamburger Menubar in desktop view */
+  #hamburger-menu {
+    display: block;
+  }
+
+  #hamburger-menu ul {
+    text-align: center;
+  }
+
+  #hamburger-menu ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* Top Hamburger Menubar in mobile view */
+  #hamburger-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+
+  #hamburger-menu ul {
+    display: none;
+  }
+
+  #hamburger-menu .menu-toggle {
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  #hamburger-menu .menu-toggle.open {
+    transform: rotate(90deg);
+  }
+
+  #hamburger-menu .menu-items {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px;
+    display: none;
+  }
+
+  #hamburger-menu .menu-items.open {
+    display: block;
+  }
+
+  #hamburger-menu .menu-items ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  #hamburger-menu .menu-items ul li {
+    margin-bottom: 10px;
+  }
+
+  #hamburger-menu .menu-items ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+/* Add Task Icon */
+#add-task-btn {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+#add-task-btn:hover {
+  background-color: #45a049;
+}
+
+/* Edit and Delete Icons */
+.edit-icon, .delete-icon {
+  color: #777;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+/* Deadline for Completed Tasks */
+.completed-task-list .task-item {
+  position: relative;
+}
+
+.completed-task-list .task-item::after {
+  content: attr(data-time-completed);
+  position: absolute;
+  bottom: -15px;
+  font-size: 12px;
+  color: #777;
+}
