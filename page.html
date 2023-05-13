@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body>
+  <!-- Hamburger Menubar -->
+  <nav id="hamburger-menu">
+    <ul>
+      <li><a href="#homepage">Homepage</a></li>
+      <li><a href="#completed-tasks">Completed Tasks</a></li>
+      <li><a href="#pending-tasks">Pending Tasks</a></li>
+    </ul>
+  </nav>
+
+  <!-- Homepage -->
+  <section id="homepage">
+    <h2>Task Management</h2>
+    <div id="add-task">
+      <input type="text" id="task-input" placeholder="Enter task">
+      <button id="add-task-btn">Add Task</button>
+    </div>
+    <ul id="task-list">
+      <!-- Tasks will be dynamically added here -->
+    </ul>
+  </section>
+
+  <!-- Completed Tasks -->
+  <section id="completed-tasks">
+    <h2>Completed Tasks</h2>
+    <ul id="completed-task-list">
+      <!-- Completed tasks will be dynamically added here -->
+    </ul>
+  </section>
+
+  <!-- Pending Tasks -->
+  <section id="pending-tasks">
+    <h2>Pending Tasks</h2>
+    <ul id="pending-task-list">
+      <!-- Pending tasks will be dynamically added here -->
+    </ul>
+  </section>
+  <script src="script.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-database.js"></script>
+</body>
+</html>
